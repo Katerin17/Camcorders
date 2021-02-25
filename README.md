@@ -1,3 +1,6 @@
+# Camcorders
+Aggregation of data from multiple services 
+
 The task - 
 write code that receives and aggregates data from multiple services.
 
@@ -37,6 +40,7 @@ Original JSON string:
 ]
 
 Expected result:
+
 [
     {
         "id": 1,
