@@ -7,8 +7,8 @@ List of available cameras is locate at the link  - http://www.mocky.io/v2/5c51b9
 
 The specified link contains a string in the format JSON with fields:
 
-id - identifier of camera,
-sourceDataUrl - object data reference,
+id - identifier of camera,  
+sourceDataUrl - object data reference,  
 tokenDataUrl - object data reference.
 
 By the links specified in the fields - sourceDataUrl and tokenDataUrl - get additional information for the object. 
@@ -39,10 +39,11 @@ Original JSON string:
     }
 ]
 
-Expected result:
+Expected result:    
+
 [
     {
-        "id": 1,
+        "id": 1,  
         "urlType": "LIVE",
         "videoUrl": "rtsp://127.0.0.1/1",
         "value": "fa4b588e-249b-11e9-ab14-d663bd873d93",
@@ -76,9 +77,9 @@ and the aggregation must be done in multiple threads.
 
 Technologies are use in the class CameraDataAggregator:
 
-HttpClient - for to send GET request and retrieve response asynchronously.
-CompletableFuture<> - to save and retrieve the result.
-ObjectMapper - to retrieve and create an object from a JSON string. 
-ExecutorService - for thread control and execution in multiple threads.
+HttpClient - for to send GET request and retrieve response asynchronously.  
+CompletableFuture<> - to save and retrieve the result.  
+ObjectMapper - to retrieve and create an object from a JSON string.     
+ExecutorService - for thread control and execution in multiple threads.     
 FutureTask<> - to perform aggregation in a separate thread.
 
